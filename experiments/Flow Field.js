@@ -68,7 +68,7 @@ let from, to;
 function setup() {
   createCanvas(innerWidth, innerHeight);
   background(0);
-  colorMode(HSB);
+  colorMode(RGB);
   from = color(random(255), random(255), random(255));
   to = color(random(255), random(255), random(255));
   field = generateField();
@@ -91,7 +91,7 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < 100; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
