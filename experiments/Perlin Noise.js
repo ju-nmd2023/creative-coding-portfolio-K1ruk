@@ -5,9 +5,8 @@ function setup() {
   rectMode(CENTER);
   frameRate(70);
 
-  // choose two colors to blend between
-  from = color(random(255), random(255), random(255));   // blue
-  to   = color(random(255), random(255), random(255));   // red
+  from = color(random(255), random(255), random(255)); 
+  to   = color(random(255), random(255), random(255));
 }
 
 const size = 30;
