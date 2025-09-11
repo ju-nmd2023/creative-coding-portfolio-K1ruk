@@ -1,7 +1,15 @@
 [
   {
-    "file": "experiments/waterBehaviour.js",
+    "file": "experiments/Schotter.js",
     "name": "Name of your experiment",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   }
+  ,
+  {
+    "file": "experiments/Schotter.js",
+    "name": "Georg Nees' Schotter",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  }
+
 ]
+
