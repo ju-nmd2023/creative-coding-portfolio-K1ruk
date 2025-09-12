@@ -31,7 +31,7 @@ function draw() {
       push();
       translate(size / 2 + x * size, size / 2 + y * size);
       rotate(angle);
-      rect(0, 0, size, size);
+      rect(0, 0, size, size, 5);
       pop();
     }
   }

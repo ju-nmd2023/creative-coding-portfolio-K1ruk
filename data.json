@@ -1,15 +1,32 @@
 [
   {
     "file": "experiments/Schotter.js",
-    "name": "Name of your experiment",
+    "name": "Georg Nees' Schotter",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   }
   ,
   {
-    "file": "experiments/Schotter.js",
-    "name": "Georg Nees' Schotter",
+    "file": "experiments/Schotter Variation.js",
+    "name": "Georg Nees' Schotter Variation",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   }
-
+  ,
+  {
+    "file": "experiments/Rotating Perlin Noise.js",
+    "name": "Perlin Noise",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  }
+  ,
+  {
+    "file": "experiments/Perlin Noise Variation.js",
+    "name": "The Mist",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  }
+  ,
+  {
+    "file": "experiments/Flow Field.js",
+    "name": "Flow Field",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  }
 ]
 
