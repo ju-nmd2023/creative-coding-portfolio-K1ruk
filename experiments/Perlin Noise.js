@@ -1,18 +1,18 @@
 let from, to;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(innerWidth, innerHeight);
   rectMode(CENTER);
-  frameRate(70);
+  frameRate(120);
 
-  from = color(random(255), random(255), random(255)); 
-  to   = color(random(255), random(255), random(255));
+  from = color(random(255),random(255),random(255)); 
+  to   = color(random(255),random(255),random(255));
 }
 
-const size = 30;
+const size = 40;
 let divider = 15; 
-const numRows = windowHeight / size;
-const numCols = windowWidth / size;
+const numRows = innerHeight / size;
+const numCols = innerWidth / size;
 let counter = 0;
 
 function draw() {

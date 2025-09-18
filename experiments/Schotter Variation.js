@@ -1,34 +1,54 @@
-let cols = 120;
+let cols = 50;
 let rows = 30;
-let squareSize = 5;
+let squareSize = 15;
 let randomStep = 1;
 let rand = 0;
 let randomValue;
 let dampen = 0.1;
-let marginX = 75;
-let marginY = 25;
+let gridWidth, gridHeight;
+let marginX, marginY;
+let slider;
 
-function setup()
-{
+function setup() {
+    slider = createSlider(1, 100);
+    slider.position(200, 100);
+    slider.size(80);
+
     createCanvas(windowWidth, windowHeight);
     background(25);
     noFill();
     stroke(220);
     rectMode(CENTER);  
     noLoop();
+
+    gridWidth = cols * squareSize;
+    gridHeight = rows * squareSize;
+
+    // Center the grid in the middle of the canvas
+    marginX = width / 2 - gridWidth / 2;
+    marginY = height / 2 - gridHeight / 2;
 }
 
-function draw(){
-    for(let y = 1; y<=rows; y++){
-        squareSize += 1;
-        rand += (y*randomStep);
-        for(let x = 1; x<=cols; x++){
+function draw() {
+    rows = slider.value();
+
+    rand = 0;  // Reset random step base
+    squareSize += 2;
+    for (let y = 0; y < rows; y++) {
+        rand += y * randomStep;
+
+        for (let x = 0; x < cols; x++) {
             push();
+
             randomValue = random(-rand, rand);
-            translate((x * squareSize) + (randomValue * dampen),(y * squareSize) + (randomValue*dampen));
+
+            let px = marginX + x * squareSize + (randomValue * dampen);
+            let py = marginY + y * squareSize + (randomValue * dampen);
+
+            translate(px, py);
             rotate(radians(randomValue));
-                    
-            rect(0, 0, squareSize, squareSize,2);
+            rect(0, 0, squareSize, squareSize, 2);
+
             pop();
         }
     }

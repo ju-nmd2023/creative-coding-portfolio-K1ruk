@@ -64,17 +64,28 @@ class Agent {
 }
 
 let from, to;
+let fieldSize = 50;
+let maxCols, maxRows;
+let divider;
+let field;
+let agents = [];
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
   background(0);
   colorMode(RGB);
+
+  maxCols = Math.ceil(innerWidth / fieldSize);
+  maxRows = Math.ceil(innerHeight / fieldSize);
+  divider = random(2, 10);
+
   from = color(random(255), random(255), random(255));
   to = color(random(255), random(255), random(255));
+
   field = generateField();
   generateAgents();
-  frameRate(15);
 
+  frameRate(15);
 }
 
 function generateField() {
@@ -91,7 +102,7 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 200; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
@@ -102,21 +113,20 @@ function generateAgents() {
   }
 }
 
-const fieldSize = 50;
-const maxCols = Math.ceil(innerWidth / fieldSize);
-const maxRows = Math.ceil(innerHeight / fieldSize);
-const divider = random(-5,5);
-let field;
-let agents = [];
-
 function draw() {
   for (let agent of agents) {
     const x = Math.floor(agent.position.x / fieldSize);
     const y = Math.floor(agent.position.y / fieldSize);
-    const desiredDirection = field[x][y];
-    agent.follow(desiredDirection);
+
+    // Safety check in case x or y is out of bounds
+    if (field[x] && field[x][y]) {
+      const desiredDirection = field[x][y];
+      agent.follow(desiredDirection);
+    }
+
     agent.update();
     agent.checkBorders();
     agent.draw();
   }
 }
+

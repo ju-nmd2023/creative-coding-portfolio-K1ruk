@@ -1,6 +1,6 @@
 let cols = 12;
 let rows = 22;
-let squareSize = 20;
+let squareSize = 30;
 let randomStep = 1;
 let rand = 0;
 let randomValue;
@@ -10,12 +10,16 @@ let marginY = 25;
 
 function setup()
 {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(innerWidth, innerHeight);
     background(25);
     noFill();
     stroke(220);
     rectMode(CENTER);    
     noLoop();
+    const gridWidth = cols * squareSize;
+    const gridHeight = rows * squareSize;
+    marginX = (width - gridWidth) / 2;
+    marginY = (height - gridHeight) / 2;
 }
 
 function draw(){
