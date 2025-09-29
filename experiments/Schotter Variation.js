@@ -1,5 +1,5 @@
 let cols = 50;
-let rows = 30;
+let rows = 0;
 let squareSize = 15;
 let randomStep = 1;
 let rand = 0;
@@ -10,7 +10,7 @@ let marginX, marginY;
 let slider;
 
 function setup() {
-    slider = createSlider(1, 100);
+    slider = createSlider(1, 50, 1, 5);
     slider.position(200, 100);
     slider.size(80);
 
@@ -31,10 +31,10 @@ function setup() {
 
 function draw() {
     rows = slider.value();
-
-    rand = 0;  // Reset random step base
+    rand = 0;
     squareSize += 2;
     for (let y = 0; y < rows; y++) {
+        
         rand += y * randomStep;
 
         for (let x = 0; x < cols; x++) {
@@ -51,5 +51,6 @@ function draw() {
 
             pop();
         }
+        
     }
 }
