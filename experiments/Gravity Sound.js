@@ -38,7 +38,7 @@ for (let p of particles) {
     let rope = p5.Vector.sub(anchor, p.pos);
     let distance = rope.mag();
     if (distance > ropeLength) {
-        let k = 0.05;
+        let k = 0.10;
         rope.setMag(k * (distance - ropeLength));
         p.applyForce(rope);
     }
