@@ -13,7 +13,8 @@ function setup() {
     slider = createSlider(1, 50, 1, 5);
     slider.position(200, 100);
     slider.size(80);
-
+    slider.input(() => redraw());
+    slider.style("height:3px; cursor:pointer;");
     createCanvas(windowWidth, windowHeight);
     background(25);
     noFill();
@@ -26,13 +27,13 @@ function setup() {
 
     // Center the grid in the middle of the canvas
     marginX = width / 2 - gridWidth / 2;
-    marginY = height / 2 - gridHeight / 2;
+    marginY = height / 5 - gridHeight / 2;
 }
 
 function draw() {
+    background(25);
     rows = slider.value();
     rand = 0;
-    squareSize += 2;
     for (let y = 0; y < rows; y++) {
         
         rand += y * randomStep;

@@ -16,8 +16,15 @@ function setup() {
   }
 
   synth = new Tone.Synth({
-    oscillator: { type: "sine" },
-    envelope: { attack: 0.01, decay: 0.1, sustain: 0.2, release: 0.5 }
+    oscillator: { 
+      type: "triangle7" 
+    },
+    envelope: { 
+      attack: 0.01, 
+      decay: 0.1, 
+      sustain: 0.2, 
+      release: 0.5 
+    }
   }).toDestination();
 }
 
