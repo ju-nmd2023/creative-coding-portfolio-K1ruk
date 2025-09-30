@@ -129,4 +129,7 @@ function draw() {
     agent.draw();
   }
 }
+function mouseClicked(){
+  saveCanvas('downloads', 'png');
+}
 

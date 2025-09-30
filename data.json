@@ -1,44 +1,45 @@
 [
+  
   {
     "file": "experiments/Schotter.js",
     "name": "Georg Nees' Schotter",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This piece is inspired by Georg Nees’ Schotter, where an orderly grid of squares gradually breaks into chaos as they move down the canvas."
   }
   ,
   {
     "file": "experiments/Schotter Variation.js",
     "name": "Georg Nees' Schotter Variation",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This piece is a variation of Georg Nees’ Schotter, but with a little twist. You can control the number of rows and columns with sliders to explore different levels of order and chaos."
   }
   ,
   {
     "file": "experiments/Perlin Noise.js",
-    "name": "Perlin Noise",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "Chromatic Grid",
+    "description": "This sketch creates a grid of rotating squares that blend smoothly from one random color at the top to another at the bottom. You can click the canvas to save your own random piece of artwork."
   }
   ,
   {
     "file": "experiments/Perlin Noise Variation.js",
-    "name": "The Mist",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "The Thundercloud",
+    "description": "This generative piece uses Perlin noise to create a grid of circles with varying sizes and shades, forming a textured, cloud-like pattern that resembles a thundercloud."
   }
   ,
   {
     "file": "experiments/Flow Field.js",
     "name": "Flow Field",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This artwork uses a flow field to guide hundreds of tiny lines across the canvas, drawing thin lines that trace their paths. The result is a dynamic, flowing pattern with a smooth vertical gradient between two random colors, creating an abstract, river-like movement over canvas. Click on canvas to save your one and only piece of art."
   }
   ,
   {
     "file": "experiments/Fireworks.js",
     "name": "Fireworks",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "Colorful fireworks shoot up and explode into sparkling particles, creating a dynamic, fading light show across the canvas"
   }
   ,
   {
     "file": "experiments/Gravity Sound.js",
     "name": "Gravity Sound",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "Circles swing and collide, with each collision there is a 30% chance of playing a tone for an audio-visual effect."
   }
 ]
 

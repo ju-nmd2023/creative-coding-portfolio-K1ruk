@@ -7,14 +7,30 @@ let randomValue;
 let dampen = 0.1;
 let gridWidth, gridHeight;
 let marginX, marginY;
-let slider;
+let rowSlider, colSlider;
+let pRow, pCol;
 
 function setup() {
-    slider = createSlider(1, 50, 1, 5);
-    slider.position(200, 100);
-    slider.size(80);
-    slider.input(() => redraw());
-    slider.style("height:3px; cursor:pointer;");
+    pRow = createP("Drag to change <br> number of rows")
+    pRow.position(200,70);
+    pRow.style("color:whitesmoke;");
+
+    rowSlider = createSlider(1, 30, 1, 3);
+    rowSlider.position(200, 150);
+    rowSlider.size(80);
+    rowSlider.input(() => redraw());
+    rowSlider.style("height:3px; cursor:pointer;");
+
+    pCol = createP("Drag to change <br> number of columns")
+    pCol.position(200,220);
+    pCol.style("color:whitesmoke;");
+
+    colSlider = createSlider(1, 30, 1, 3);
+    colSlider.position(200, 300);
+    colSlider.size(80);
+    colSlider.input(() => redraw());
+    colSlider.style("height:3px; cursor:pointer;");
+
     createCanvas(windowWidth, windowHeight);
     background(25);
     noFill();
@@ -27,12 +43,13 @@ function setup() {
 
     // Center the grid in the middle of the canvas
     marginX = width / 2 - gridWidth / 2;
-    marginY = height / 5 - gridHeight / 2;
+    marginY = height / 6 - gridHeight / 2;
 }
 
 function draw() {
     background(25);
-    rows = slider.value();
+    rows = rowSlider.value();
+    cols = colSlider.value();
     rand = 0;
     for (let y = 0; y < rows; y++) {
         

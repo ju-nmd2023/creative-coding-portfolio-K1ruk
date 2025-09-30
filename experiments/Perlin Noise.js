@@ -37,3 +37,7 @@ function draw() {
   }
   counter += 0.01;
 }
+
+function mouseClicked(){
+  saveCanvas('downloads', 'png');
+}
